@@ -15,9 +15,11 @@
         let userText = prompt("Wpisz swój bazowy tekst: ");
         //let itemNumber = parseInt(prompt("Z której pozycji chcesz literę (znak): "));
         //let wantedSign = prompt("Jakiego znaku szukasz?");
-        let startSign = parseInt(prompt("Od którego znaku chcesz zacząć: "));
+        //let startSign = parseInt(prompt("Od którego znaku chcesz zacząć: "));
         //let howMany = parseInt(prompt("Jak długie ma być zaznaczenie: "));
-        let stopSign = parseInt(prompt("W którym miejscu ma się zakończyć: "))
+        //let stopSign = parseInt(prompt("W którym miejscu ma się zakończyć: "))
+        let whichWord = prompt("Które słowo chcesz zamienić: ");
+        let forWhichWord = prompt("Tu wpisz na jakie chcesz zastąpić: ");
 
         //alert("Długość wpisanego tekstu: " + userText.length);
 
@@ -43,8 +45,9 @@
 
         //alert(userText.substr(startSign - 1, howMany));
 
-        alert(userText.substring(startSign - 1, stopSign));
+        //alert(userText.substring(startSign - 1, stopSign));
 
+        alert(userText.replace(whichWord, forWhichWord));
 
 
 
