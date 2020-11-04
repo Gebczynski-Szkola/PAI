@@ -14,14 +14,32 @@
 
         let userText = prompt("Wpisz swój bazowy tekst: ");
         //let itemNumber = parseInt(prompt("Z której pozycji chcesz literę (znak): "));
+        let wantedSign = prompt("Jakiego znaku szukasz?");
 
         //alert("Długość wpisanego tekstu: " + userText.length);
 
         //alert("To jest twoja litera (znak): " + userText.charAt(itemNumber - 1));
         //alert(("To jest twoja litera (znak): " + userText[itemNumber - 1]));
 
-        alert("Twój tekst wielkimi literami: " + userText.toUpperCase());
-        alert("Twój tekst małymi literami: " + userText.toLowerCase());
+        //alert("Twój tekst wielkimi literami: " + userText.toUpperCase());
+        //alert("Twój tekst małymi literami: " + userText.toLowerCase());
+
+        if (userText.indexOf(wantedSign) == -1) {
+            alert("Nie ma takiego znaku w twoim tekscie!");
+        }
+        else {
+            alert("Twój szukany znak znajduję sie na pozycji: " + userText.indexOf(wantedSign));
+        }
+
+        if (userText.lastIndexOf(wantedSign) == -1) {
+            alert("Nie ma takiego znaku w twoim tekscie!");
+        }
+        else {
+            alert("Twój szukany znak znajduję sie na pozycji: " + userText.lastIndexOf(wantedSign));
+        }
+
+
+
 
     </script>
 
