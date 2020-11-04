@@ -16,7 +16,8 @@
         //let itemNumber = parseInt(prompt("Z której pozycji chcesz literę (znak): "));
         //let wantedSign = prompt("Jakiego znaku szukasz?");
         let startSign = parseInt(prompt("Od którego znaku chcesz zacząć: "));
-        let howMany = parseInt(prompt("Jak długie ma być zaznaczenie: "));
+        //let howMany = parseInt(prompt("Jak długie ma być zaznaczenie: "));
+        let stopSign = parseInt(prompt("W którym miejscu ma się zakończyć: "))
 
         //alert("Długość wpisanego tekstu: " + userText.length);
 
@@ -40,7 +41,9 @@
         //     alert("Twój szukany znak znajduję sie na pozycji: " + userText.lastIndexOf(wantedSign));
         // }
 
-        alert(userText.substr(startSign - 1, howMany));
+        //alert(userText.substr(startSign - 1, howMany));
+
+        alert(userText.substring(startSign - 1, stopSign));
 
 
 
