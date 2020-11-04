@@ -13,9 +13,11 @@
     <script>
 
         let userText = prompt("Wpisz swój bazowy tekst: ");
+        let itemNumber = parseInt(prompt("Z której pozycji chcesz literę (znak): "));
 
-        console.log("Długość wpisanego tekstu: " + userText.length);
+        //alert("Długość wpisanego tekstu: " + userText.length);
 
+        alert("To jest twoja litera (znak): " + userText.charAt(itemNumber - 1));
 
     </script>
 
