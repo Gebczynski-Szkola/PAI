@@ -11,9 +11,10 @@
 <body>
 
     <script>
-
-        let userText = prompt("Wpisz swój bazowy tekst: ");
-        let whichOperation = prompt(`Wybierz funkcję z listy: 
+        const a = 0;
+        while (a != 1) {
+            let userText = prompt("Wpisz swój bazowy tekst: ");
+            let whichOperation = prompt(`Wybierz funkcję z listy: 
         1. Lenght, 
         2. charAt(),  
         3. toUpperCase,  
@@ -29,114 +30,103 @@
         13. replace 
         14. repeat`);
 
-        //let userText = prompt("Wpisz swój bazowy tekst: ");
-        //let itemNumber = parseInt(prompt("Z której pozycji chcesz literę (znak): "));
-        //let wantedSign = prompt("Jakiego znaku szukasz?");
-        //let startSign = parseInt(prompt("Od którego znaku chcesz zacząć: "));
-        //let howMany = parseInt(prompt("Jak długie ma być zaznaczenie: "));
-        //let stopSign = parseInt(prompt("W którym miejscu ma się zakończyć: "))
-        //let whichWord = prompt("Które słowo chcesz zamienić: ");
-        //let forWhichWord = prompt("Tu wpisz na jakie chcesz zastąpić: ");
+            switch (whichOperation) {
+                case "1":
+                    alert("Długość wpisanego tekstu: " + userText.length);
+                    break;
 
-        //alert("Długość wpisanego tekstu: " + userText.length);
+                case "2":
+                    let itemNumber = parseInt(prompt("Z której pozycji chcesz literę (znak): "));
+                    alert("To jest twoja litera (znak): " + userText.charAt(itemNumber - 1));
+                    break;
 
-        //alert("To jest twoja litera (znak): " + userText.charAt(itemNumber - 1));
-        //alert(("To jest twoja litera (znak): " + userText[itemNumber - 1]));
+                case "3":
+                    alert("Twój tekst wielkimi literami: " + userText.toUpperCase());
+                    break;
 
-        //alert("Twój tekst wielkimi literami: " + userText.toUpperCase());
-        //alert("Twój tekst małymi literami: " + userText.toLowerCase());
+                case "4":
+                    alert("Twój tekst małymi literami: " + userText.toLowerCase());
+                    break;
 
-        // if (userText.indexOf(wantedSign) == -1) {
-        //     alert("Nie ma takiego znaku w twoim tekscie!");
-        // }
-        // else {
-        //     alert("Twój szukany znak znajduję sie na pozycji: " + userText.indexOf(wantedSign));
-        // }
+                case "5":
+                    let wantedSign = prompt("Jakiego znaku szukasz?");
+                    if (userText.indexOf(wantedSign) == -1) {
+                        alert("Nie ma takiego znaku w twoim tekscie!");
+                    }
+                    else {
+                        alert("Twój szukany znak znajduję sie na pozycji: " + userText.indexOf(wantedSign));
+                    }
+                    break;
 
-        // if (userText.lastIndexOf(wantedSign) == -1) {
-        //     alert("Nie ma takiego znaku w twoim tekscie!");
-        // }
-        // else {
-        //     alert("Twój szukany znak znajduję sie na pozycji: " + userText.lastIndexOf(wantedSign));
-        // }
+                case "6":
+                    let wantedSignn = prompt("Jakiego znaku szukasz?");
+                    if (userText.lastIndexOf(wantedSignn) == -1) {
+                        alert("Nie ma takiego znaku w twoim tekscie!");
+                    }
+                    else {
+                        alert("Twój szukany znak znajduję sie na pozycji: " + userText.lastIndexOf(wantedSignn));
+                    }
+                    break;
 
-        //alert(userText.substr(startSign - 1, howMany));
+                case "7":
+                    let starst = prompt("Wpisz słowo: ");
+                    if (userText.startsWith(starst) == true) {
+                        alert("Wpisane słowo jest pierwszym słowem w tekscie");
+                    }
+                    else {
+                        alert("Wpisane słowo nie jest pierwsze w tekscie");
+                    }
+                    break;
 
-        //alert(userText.substring(startSign - 1, stopSign));
+                case "8":
+                    let end = prompt("Wpisz słowo: ");
+                    if (userText.endsWith(end) == true) {
+                        alert("Wpisane słowo jest ostatnim słowem w tekscie");
+                    }
+                    else {
+                        alert("Wpisane słowo nie jest ostatnim w tekscie");
+                    }
+                    break;
 
-        //alert(userText.replace(whichWord, forWhichWord));
+                case "9":
+                    let startSign = parseInt(prompt("Od którego znaku chcesz zacząć: "));
+                    let howManySubstr = parseInt(prompt("Jak długie ma być zaznaczenie: "));
+                    alert(userText.substr(startSign - 1, howManySubstr));
+                    break;
 
-        switch (whichOperation) {
-            case "1":
-                alert("Długość wpisanego tekstu: " + userText.length);
-                break;
+                case "10":
+                    let startSignSubstring = parseInt(prompt("Od którego znaku chcesz zacząć: "));
+                    let stopSign = parseInt(prompt("W którym miejscu ma się zakończyć: "))
+                    alert(userText.substring(startSignSubstring - 1, stopSign));
+                    break;
 
-            case "2":
-                let itemNumber = parseInt(prompt("Z której pozycji chcesz literę (znak): "));
-                alert("To jest twoja litera (znak): " + userText.charAt(itemNumber - 1));
-                break;
+                case "11":
+                    let startSlice = parseInt(prompt("W którym miejscu zacząć: "));
+                    let stopSlice = parseInt(prompt("W którym miejscu skończyć"));
+                    alert(userText.slice(startSlice, stopSlice));
+                    break;
 
-            case "3":
-                alert("Twój tekst wielkimi literami: " + userText.toUpperCase());
-                break;
+                case "12":
+                    let signSplit = prompt("Który znak ma rozdzielać tekst: ");
+                    let valueSplit = prompt("Ilość elementów: ")
+                    alert(userText.split(signSplit, valueSplit));
 
-            case "4":
-                alert("Twój tekst małymi literami: " + userText.toLowerCase());
-                break;
+                case "13":
+                    let whichWord = prompt("Które słowo chcesz zamienić " + "( " + userText + " )" + " : ");
+                    let forWhichWord = prompt("Tu wpisz na jakie chcesz zastąpić: ");
+                    alert(userText.replace(whichWord, forWhichWord));
+                    break;
 
-            case "5":
-                let wantedSign = prompt("Jakiego znaku szukasz?");
-                if (userText.indexOf(wantedSign) == -1) {
-                    alert("Nie ma takiego znaku w twoim tekscie!");
-                }
-                else {
-                    alert("Twój szukany znak znajduję sie na pozycji: " + userText.indexOf(wantedSign));
-                }
-                break;
+                case "14":
+                    let repeatValue = parseInt(prompt("Ile razy chcesz powtórzyć wpisany tekst: "));
+                    alert("Tekst powtórzony " + repeatValue + " : " + userText.repeat(repeatValue));
+                    break;
 
-            case "6":
-                let wantedSignn = prompt("Jakiego znaku szukasz?");
-                if (userText.lastIndexOf(wantedSignn) == -1) {
-                    alert("Nie ma takiego znaku w twoim tekscie!");
-                }
-                else {
-                    alert("Twój szukany znak znajduję sie na pozycji: " + userText.lastIndexOf(wantedSignn));
-                }
-                break;
-
-            case "7":
-                let starst = prompt("Wpisz słowo: ");
-                if (userText.startsWith(starst) == true) {
-                    alert("Wpisane słowo jest pierwszym słowem w tekscie");
-                }
-                else {
-                    alert("Wpisane słowo nie jest pierwsze w tekscie");
-                }
-                break;
-
-            case "8":
-                let end = prompt("Wpisz słowo: ");
-                if (userText.endsWith(end) == true) {
-                    alert("Wpisane słowo jest pierwszym słowem w tekscie");
-                }
-                else {
-                    alert("Wpisane słowo nie jest pierwsze w tekscie");
-                }
-                break;
-
-            case "9":
-                let startSign = parseInt(prompt("Od którego znaku chcesz zacząć: "));
-                let howManySubstr = parseInt(prompt("Jak długie ma być zaznaczenie: "));
-                alert(userText.substr(startSign - 1, howManySubstr));
-                break;
-
-
-
-            default:
-
+                default:
+                    alert("Funkcja została wpisana źle. Wpisz sam numer operacji którą chcesz wykonać.")
+                    break;
+            }
         }
-
-
     </script>
 
 </body>
