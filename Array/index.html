@@ -24,9 +24,28 @@
         for (let i = 0; i < zad2Lenght; i++) {
             zad2.push(zad1[zad2Lenght - i - 1]);
         }
-
         console.log(zad2);
 
+        //zadanie 3
+        const zad3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        const zad3Lenght = zad3.length;
+        const zad3Podzielne = [];
+
+        for (let i = 1; i < zad3Lenght; i++) {
+            let liczba = zad3[i];
+
+            if (liczba % 3 == 0 && liczba % 5 == 0) {
+                zad3Podzielne.push(liczba);
+            }
+            else if (liczba % 3 == 0) {
+                zad3Podzielne.push(liczba);
+            }
+            else if (liczba % 5 == 0) {
+                zad3Podzielne.push(liczba);
+            }
+        }
+
+        console.log(zad3Podzielne);
 
     </script>
 </body>
