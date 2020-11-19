@@ -11,12 +11,12 @@
 <body>
     <script>
         //zadanie 1
-        console.log("Zadanie 1")
+        console.log("Zadanie 1");
         const zad1 = [1, "a", "Ania", 3, "kot", 4.3, 10.1, "pies", "13a", 10];
         console.log(zad1);
 
         //zadanie 2
-        console.log("Zadanie 2")
+        console.log("Zadanie 2");
         //const zad2 = zad1.reverse();
 
         const zad2Lenght = zad1.length;
@@ -31,7 +31,7 @@
         }
 
         //zadanie 3
-        console.log("Zadanie 3")
+        console.log("Zadanie 3");
         const zad3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
         const zad3Lenght = zad3.length;
         const zad3Podzielne = [];
@@ -53,7 +53,7 @@
         console.log(zad3Podzielne);
 
         //zadanie 4 
-        console.log("Zadanie 4")
+        console.log("Zadanie 4");
 
         const tablica4 = [];
 
@@ -64,6 +64,15 @@
 
         for (let i = 0; i < 5; i++) {
             console.log((i + 1) + ". " + tablica4[i]);
+        }
+
+        //zadanie 5
+        console.log("Zadanie 5");
+
+        const zad5 = zad3Podzielne.concat(tablica4);
+
+        for (let i = 0; i < zad3Podzielne.length + tablica4.length; i++) {
+            console.log(zad5[i]);
         }
 
 
