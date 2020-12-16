@@ -10,13 +10,15 @@ let wielkosc = wysokosc.value;
 function wypiszChoinke(wielkosc) {
     const level = parseInt(wysokosc.value);
     let tree = "";
+    let gwiazdki = 1;
+    let spacja = (level - 1);
 
-    for (let i = 1; i <= level + 1; i++) {//wysokosc choinki 
-        for (let j = 1; j < i; j++) {//wypisanie gwaizdek 
-            tree += "*";
+    for (let i = 0; i < level; i++) {//wysokosc choinki 
+        for (let k = level; k > i; k--) {
+            tree += "&nbsp;";
         }
-        for (let k = 1; k <= 1; k++) {
-            tree += "&nbsp;"
+        for (let j = 0; j <= i * 2; j++) {//wypisanie gwaizdek 
+            tree += "*";
         }
         tree += "<br>";
     }
