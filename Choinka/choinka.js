@@ -2,6 +2,7 @@ const pojemnik = document.querySelector("#output");
 //console.log(pojemnik);
 const wysokosc = document.querySelector("#wysokosc");
 const button = document.querySelector("#send");
+const kolor = document.querySelector("#kolor");
 
 button.addEventListener("click", wypiszChoinke);
 
@@ -12,6 +13,7 @@ function wypiszChoinke(wielkosc) {
     let tree = "";
     let gwiazdki = 1;
     let spacja = (level - 1);
+    const kolorDrzewka = kolor.value;
 
     for (let i = 0; i < level; i++) {//wysokosc choinki 
         for (let k = level; k > i; k--) {
@@ -24,4 +26,5 @@ function wypiszChoinke(wielkosc) {
     }
 
     pojemnik.innerHTML = tree;
+    pojemnik.style.color = kolorDrzewka;
 }
