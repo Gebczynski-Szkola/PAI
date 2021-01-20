@@ -1,8 +1,10 @@
-let age = document.querySelector("#age");
+
 let color = document.querySelector("#color");
+
 const submit = document.querySelector("#submit").addEventListener("click", function (event) {
     event.preventDefault();
     nameCheck();
+    ageCheck();
 });
 
 function nameCheck() {
@@ -18,7 +20,6 @@ function nameCheck() {
 
         const nameFalse = document.querySelector("#nameFalse");
         nameFalse.innerText = "";
-
     }
     else {
         const nameFalse = document.querySelector("#nameFalse");
@@ -26,4 +27,22 @@ function nameCheck() {
     }
 }
 
-//submit.addEventListener("click",);
+function ageCheck() {
+    const age = document.querySelector("#age").value;
+    const ageResult = document.querySelector("#ageResult");
+
+    if (age / 2 == 0) {
+        ageResult.innerText = "";
+    }
+    else if (age < 18) {
+        ageResult.innerText = "Masz " + age + " lat. Brakuję ci " + (18 - age) + " lata do pełnoletności";
+    }
+    else if (age == 18) {
+        ageResult.innerText = "Masz 18 lat";
+
+    }
+    else if (age > 18) {
+        ageResult.innerText = "Jesteś już pełnoletni " + (age - 18) + " lat";
+    }
+}
+
