@@ -1,11 +1,11 @@
+const submit = document.querySelector("#submit").addEventListener("click",
 
-let color = document.querySelector("#color");
-
-const submit = document.querySelector("#submit").addEventListener("click", function (event) {
-    event.preventDefault();
-    nameCheck();
-    ageCheck();
-});
+    function (event) {
+        event.preventDefault();
+        nameCheck();
+        ageCheck();
+        colorCheck();
+    });
 
 function nameCheck() {
     const name = document.querySelector("#name").value
@@ -43,6 +43,21 @@ function ageCheck() {
     }
     else if (age > 18) {
         ageResult.innerText = "Jesteś już pełnoletni " + (age - 18) + " lat";
+    }
+}
+
+function colorCheck() {
+    const color = document.querySelector("#color").value;
+    const result = document.querySelector("#result");
+
+    const firstColor = color[0];
+    const firstSign = "#";
+
+    if (firstSign == firstColor && color.length == 7) {
+        result.style.borderColor = color;
+    }
+    else {
+        result.style.borderColor = "transparent";
     }
 }
 

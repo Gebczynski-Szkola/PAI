@@ -10,7 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+
     form{
         width: 75%;
         display: flex;
@@ -25,5 +26,14 @@
         .form__input{
             margin: 1% 0 5% 0;
         }
+    }
+
+    .result{
+        width: 75%;
+        margin-top: 2%;
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
