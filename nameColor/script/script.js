@@ -9,22 +9,26 @@ const submit = document.querySelector("#submit").addEventListener("click",
 
 function nameCheck() {
     const name = document.querySelector("#name").value
-
+    const nameFalse = document.querySelector("#nameFalse");
+    const nameResult = document.querySelector("#nameResult");
     const noFirstSign = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "[", "{", "}", "]", ";", ":", "'", "|", ",", "<", ">", ".", "?"];
 
     const firstSign = name[0];
 
-    if (noFirstSign.indexOf(firstSign) == -1) {
-        const nameResult = document.querySelector("#nameResult");
-        nameResult.innerText = "Cześć " + name;
 
-        const nameFalse = document.querySelector("#nameFalse");
-        nameFalse.innerText = "";
+    if (name.length > 3) {
+        if (noFirstSign.indexOf(firstSign) == -1) {
+            nameResult.innerText = "Cześć " + name + ",";
+            nameFalse.innerText = "";
+        }
+        else {
+            nameFalse.innerText = "Imię nie może się zaczynać od znaku lub cyfry!"
+        }
     }
-    else {
-        const nameFalse = document.querySelector("#nameFalse");
-        nameFalse.innerText = "Imię nie może się zaczynać od znaku lub cyfry!"
+    else if (name.length < 3) {
+        nameFalse.innerText = "Imię musi mieć więcej niż 3 litery"
     }
+
 }
 
 function ageCheck() {
