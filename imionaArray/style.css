@@ -1,0 +1,4 @@
+.damskie, .meskie{
+    display: flex;
+    flex-direction: column;
+}
