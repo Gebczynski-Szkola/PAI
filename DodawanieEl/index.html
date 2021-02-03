@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodawanie elementów</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button id="przycisk">Dodaj</button>
+    </div>
+    <script>
+        const przycisk = document.querySelector('#przycisk');
+        const text = 'Tekst testowy - element nr';
+        let count = 0;
+
+        przycisk.addEventListener('click', function () {
+            count++;
+            const div = document.createElement('section');
+            const p = document.createElement('p');
+            const tekst = document.createTextNode(`${text} ${count}`);
+            const zdjecie = document.createElement('img');
+
+            div.appendChild(p);
+            p.appendChild(tekst);
+            div.appendChild(zdjecie);
+
+            zdjecie.src = `https://picsum.photos/150/100?random=${count}`;
+            div.style.display = "flex";
+            div.style.width = '75%';
+            p.style.width = "40%";
+            zdjecie.style.boxShadow = "10px 10px 30px -10px black";
+            div.style.boxShadow = "10px 10px 30px -20px black";
+            div.style.height = '20vh';
+            div.style.color = '#0ffdf';
+            div.style.backgroundColor = '#CCCC33';
+            div.style.cursor = 'pointer';
+            div.style.justifyContent = "space-around";
+            div.style.alignItems = "center";
+            div.style.setProperty('margin-top', '5px');
+            div.addEventListener('click', function () {
+                this.remove();
+            });
+            document.getElementById('container').appendChild(div);
+
+            //ok moze dziala
+        });
+    </script>
+</body>
+
+</html>
