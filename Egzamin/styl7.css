@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 80px 200px 300px auto;
+    grid-template-areas:
+    " header header header"
+    "left mid right"
+    "main main main"
+    "footer footer footer"
+    ;
+}
+
+.header{
+    background-color: #1C59A7;
+    color: white;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    grid-area: header;
+}
+
+.header h1{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px ;
+    grid-template-areas: 
+    ". img1 tekst tekst img2 ."
+    ;
+}
+
+.header h1 img:nth-child(1){
+    grid-area: img1;
+    justify-self: end;
+}
+
+.header h1 img:nth-child(3){
+    grid-area: img2;
+}
+
+.header p {
+    grid-area: tekst;
+}
+
+.left-panel{
+    background-color: #3A70B5 ;
+    height: 200px;
+    grid-area: left;
+}
+
+.mid-panel{
+    background-color: #5A8AC8 ;
+    height: 200px;
+    grid-area: mid;
+}
+
+.right-panel{
+    background-color: #86ACDD ;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    grid-area: right;
+    display: grid;
+    grid-template-columns: 1fr 30% 1fr;
+    grid-template-rows: 1% min-content ;
+    grid-template-areas: 
+    ". . ."
+    ". p ."
+    ;
+}
+
+.right-panel p {
+    background-color: yellow;
+    color: blue;
+    padding: 10px;
+    grid-area: p;
+}
+
+main{
+    background-color:#86ACDD ;
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    grid-area: main;
+}
+
+footer{
+    background-color: #1C59A7;
+    color: white;
+    width: 100%;
+    grid-area: footer;
+}
+
+footer span{
+    font-style: italic;
+}
