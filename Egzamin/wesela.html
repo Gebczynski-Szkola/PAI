@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Oliwier Gebczynski">
-    <link rel="stylesheet" href="styl5.css">
+    <link rel="stylesheet" href="styl6.css">
     <title>Dom Weselny</title>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <img src="obraczki.png" height="70px">
-            <h1>Dom Weselny zorganizuje wesele za Ciebie</h1>
-            <img src="obraczki.png" height="70px">
+            <h1>
+                <img src="obraczki.png" height="70px" >
+                <p>Dom Weselny zorganizuje wesele za Ciebie</p>
+                <img src="obraczki.png" height="70px">
+            </h1>
         </header>
         <section class="left-panel">
             <h2>Dom Weselny</h2>
@@ -34,9 +36,9 @@
         </section>
         <main>
             <h2>Ile będzie kosztowało moje wesele?</h2>
-            <label>Podaj liczbę gości:<input type="number" id="number"></label>
-            <label><input type="checkbox" id="checkbox">Wesele z poprawinami?</label>
-            <button id="button">Oblicz koszt</button>
+            <label>Podaj liczbę gości:<input type="number" id="number"></label><br>
+            <label><input type="checkbox" id="checkbox">Wesele z poprawinami?</label><br>
+            <button id="button">Oblicz koszt</button><br>
             <p id="output"></p>
         </main>
         <footer>
@@ -50,7 +52,8 @@
                 const output = document.getElementById("output");
                 const numberValue = document.getElementById("number").value;
                 const checkboxValue = document.getElementById("checkbox").checked;
-                let kosz = 0;
+                
+                let koszt = 0;
 
                 if(checkboxValue==true){
                     koszt = 100*numberValue*1.3;
@@ -61,8 +64,6 @@
 
             output.innerText = `${koszt} zł`;
         })
-
-
     </script>
 </body>
 </html>
