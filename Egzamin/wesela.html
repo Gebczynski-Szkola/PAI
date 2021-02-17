@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oliwier Gebczynski">
+    <link rel="stylesheet" href="styl5.css">
+    <title>Dom Weselny</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="obraczki.png" height="70px">
+            <h1>Dom Weselny zorganizuje wesele za Ciebie</h1>
+            <img src="obraczki.png" height="70px">
+        </header>
+        <section class="left-panel">
+            <h2>Dom Weselny</h2>
+            <p>ul. Przemysłowa 5</p>
+            <p>Kalisz</p>
+            <a href="obraczki.png">Pobierz logo</a>
+        </section>
+        <section class="mid-panel">
+            <h2>Oferujemy</h2>
+            <ul>
+                <li>Wesela</li>
+                <li>Bankiety</li>
+                <li>Konferencje</li>
+            </ul>
+        </section>
+        <section class="right-panel">
+            <p><a href="regulamin.txt">czytaj regulamin</a></p>
+        </section>
+        <main>
+            <h2>Ile będzie kosztowało moje wesele?</h2>
+            <label>Podaj liczbę gości:<input type="number" id="number"></label>
+            <label><input type="checkbox" id="checkbox">Wesele z poprawinami?</label>
+            <button id="button">Oblicz koszt</button>
+            <p id="output"></p>
+        </main>
+        <footer>
+            <p>Stronę internetową opracował: Oliwier Gębczyński <span>3i</span></p>
+        </footer>
+    </div>
+    <script>
+            const button = document.getElementById("button");
+
+            button.addEventListener("click", function(){
+                const output = document.getElementById("output");
+                const numberValue = document.getElementById("number").value;
+                const checkboxValue = document.getElementById("checkbox").checked;
+                let kosz = 0;
+
+                if(checkboxValue==true){
+                    koszt = 100*numberValue*1.3;
+                }
+                else{
+                    koszt =  numberValue*100;
+                }
+
+            output.innerText = `${koszt} zł`;
+        })
+
+
+    </script>
+</body>
+</html>
