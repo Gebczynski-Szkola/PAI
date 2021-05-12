@@ -1,0 +1,11 @@
+form {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 0;
+}
