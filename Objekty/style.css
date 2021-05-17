@@ -1,11 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./background.jpg)
+}
+
 form {
-    width: 20%;
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
 
 label {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 1% 0;
+    margin: 3% 0;
+    font-size: 25px;
+    color: white;
+}
+
+label>input {
+    width: 70%;
+    border: none;
+    border-bottom: solid white 2px;
+    background-color: transparent;
+    padding-left: 5%;
+    color: white;
+}
+
+#add {
+    margin: 10% 0;
+    background-color: brown;
+    padding: 2%;
+    font-size: 20px;
+    border-color: white;
+    color: white;
+}
+
+h1 {
+    color: white;
+    align-self: flex-start;
+    padding-left: 5%;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.catA,
+.catS,
+.catX {
+    width: 30%;
+    border-radius: 10px;
+    background-color: brown;
+    color: white;
+    padding: 2% 1% 2% 1%;
+}
+
+.catA>div,
+.catS>div,
+.catX>div {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.catA>div>button,
+.catS>div>button,
+.catX>div>button {
+    background-color: white;
+    border: none;
+    margin-top: 1%;
 }

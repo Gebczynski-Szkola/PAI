@@ -8,18 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <label for="marka">Marka: <input type="text" name="marka" id="marka"></label>
-        <label for="model">Model: <input type="text" name="model" id="model"></label>
-        <label for="rocznik">Rocznik: <input type="number" name="rocznik" id="rocznik"></label>
-        <label for="moc">Moc(hp): <input type="number" name="rocznik" id="moc"></label>
-        <label for="kolor">Kolor: <input type="text" name="kolor" id="kolor"></label>
-        <input type="submit" id="add">
-    </form>
-    <button id="najmocniejsze">Najmocniejsze auto</button>
+<div class="container">
+        <h1>TOR Chorzowska</h1>
+        <form>
+            <label for="marka">Marka: <input type="text" name="marka" id="marka"></label>
+            <label for="model">Model: <input type="text" name="model" id="model"></label>
+            <label for="rocznik">Rocznik: <input type="number" name="rocznik" id="rocznik"></label>
+            <label for="moc">Moc (hp): <input type="number" name="rocznik" id="moc"></label>
+            <label for="kolor">Kolor: <input type="text" name="kolor" id="kolor"></label>
+            <input type="submit" id="add">
+        </form>
+    <h2>Kategorie: </h2>
     <main class="main">
+        <section class="catA">
+            <h3>Kategoria A ( do 200hp )</h3>
+        </section>
+        <section class="catS">
+            <h3>Kategoria S ( 200hp - 500hp )</h3>
+        </section>
+        <section class="catX">
+            <h3>Kategoria X ( od 500hp )</h3>
+        </section>
     </main>
-
+</div>
     <script src="app.js"></script>
 </body>
 </html>
