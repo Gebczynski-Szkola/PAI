@@ -1,0 +1,65 @@
+* {
+	font-family: Georgia;
+}
+
+.baner {
+	background-color: #824555;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+.hobby,
+.tabela {
+	background-color: #a26475;
+	color: white;
+	width: 30%;
+	height: 300px;
+	float: left;
+}
+
+.zdjecie {
+	background-color: #a26475;
+	color: white;
+	width: 40%;
+	height: 300px;
+	text-align: right;
+	float: right;
+}
+
+.glowny {
+	background-color: #f0eae2;
+	padding: 50px;
+}
+
+.footer {
+	background-color: #824555;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	clear: both;
+}
+
+table,
+td,
+th {
+	border-collapse: collapse;
+	border: 2px solid #69293a;
+	padding: 7px;
+}
+
+ul {
+	list-style: square;
+}
+
+.button1 {
+	background-color: red;
+}
+
+.button2 {
+	background-color: green;
+}
+
+.button3 {
+	background-color: blue;
+}

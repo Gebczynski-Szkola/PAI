@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Oliwier Gębczyński 4i">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Formatowanie</title>
+		<link rel="stylesheet" href="styl2.css" />
+	</head>
+	<body>
+		<section class="baner">
+			<h1>Formatowanie dokumentów HTML</h1>
+		</section>
+		<section class="hobby">
+			<h2>Przykład listy - hobby</h2>
+			<ul>
+				<li>muzyka</li>
+				<li>
+					turystyk
+					<ol>
+						<li>góry</li>
+						<li>jeziora</li>
+						<li>na rowerze</li>
+					</ol>
+				</li>
+				<li>książki</li>
+			</ul>
+		</section>
+		<section class="tabela">
+			<h2>Przykład tabeli - rozkład dnia</h2>
+			<table>
+				<tr>
+					<th>Pora dnia</th>
+					<th>obowiązki</th>
+				</tr>
+				<tr>
+					<td>rano</td>
+					<td>nauka</td>
+				</tr>
+				<tr>
+					<td>południe</td>
+					<td>zajęcia dodatkowe</td>
+				</tr>
+				<tr>
+					<td>popołudnie</td>
+					<td rowspan="2">moje hobby</td>
+				</tr>
+				<tr>
+					<td>wieczór</td>
+				</tr>
+			</table>
+		</section>
+		<section class="zdjecie">
+			<img src="napisy.png" alt="technologia web" />
+		</section>
+		<section class="glowny">
+			<p>Podaj rozmiar tekstu w procentach: <input type="number" id="rozmiar"/>%</p>
+			<section>
+				<select name="wybor" id="styl">
+					<option value="normal">prosty</option>
+					<option value="italic">kursywa</option>
+				</select>
+			</section>
+			<section>
+				Jakim kolorem sformatować tekst? Wybierz przycisk<br />
+				<button class="button1" id="red"></button>
+				<button class="button2" id="green"></button>
+				<button class="button3" id="blue"></button>
+			</section>
+			<p id="tekst">
+				To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script
+			</p>
+		</section>
+		<section class="footer">
+			<p>Formatowaniem tekstu zajmował się: Oliwier Gębczyński 4i</p>
+			<a href="formatowanie.pl" target="_blank">Odwiedź także</a>
+		</section>
+		<script>
+			const redButton = document.querySelector("#red");
+			const greenButton = document.querySelector("#green");
+			const blueButton = document.querySelector("#blue");
+			const rozmiar = document.querySelector("#rozmiar");
+        	const styl = document.querySelector("#styl");
+			const tekst = document.querySelector("#tekst");
+
+        function formatowanie() {
+          tekst.style.fontSize = rozmiar.value + "%";
+          tekst.style.fontStyle = styl.value;
+        }
+
+        redButton.addEventListener("click", function () {
+          tekst.style.color = "red";
+          formatowanie();
+        });
+        greenButton.addEventListener("click", function () {
+          tekst.style.color = "green";
+          formatowanie();
+        });
+        blueButton.addEventListener("click", function () {
+          tekst.style.color = "blue";
+          formatowanie();
+        });
+		</script>
+	</body>
+</html>
