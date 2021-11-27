@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.js, .php{
+    width: 50%;
+    height: 100%;
+    font-size: 60px;
+    text-decoration: none;
+    color: black;
+    transition-duration: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.js:hover, .php:hover{
+    width: 70%;
+    font-size: 90px;
+}
+
+.js{
+    background-color: yellow;
+}
+
+.php{
+    background-color: cornflowerblue;
+}
+
+.containerJS{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.label, .btn{
+    margin: 5% 0;
+    font-size: 20px;
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containerJS">
+        <form class="form">
+            <label class="label">Pierwsza data:
+                <input type="date" id="firstDate">
+            </label>
+            <label class="label">Druga data:
+                <input type="date" id="secondDate">
+            </label>
+            <button class="btn" id="btn">Oblicz</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const resultText = document.querySelector("#result");
+
+        btn.addEventListener("click", function(){
+            event.preventDefault();
+            const first = document.querySelector("#firstDate").value;
+            const second = document.querySelector("#secondDate").value;
+
+            const firstDate = new Date(first);
+            const secondDate = new Date(second);
+
+            if(secondDate < firstDate){
+                alert("Pierwsza data nie moze byc wieksza niz druga!")
+            }else{
+                result = secondDate.getTime() - firstDate.getTime();
+                result = result / (1000*3600*24);
+
+                console.log(result);
+
+                if(result < 10){
+                    resultText.innerHTML = "OK";
+                }else if(result < 20){
+                    resultText.innerHTML = "Super";
+                }else if(result < 50){
+                    resultText.innerHTML = "Rewelacyjnie";
+                }   
+            }
+        })
+    </script>
+</body>
+</html>
