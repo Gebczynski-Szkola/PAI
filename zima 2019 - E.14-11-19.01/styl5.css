@@ -1,0 +1,57 @@
+*{
+    font-family: Verdana;
+}
+
+.baner{
+    background-color: #9692B1;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+
+.lewy{
+    background-color:#9692B1;
+    color: white;
+    width: 20%;
+    height: 750px;
+    float: left;
+}
+
+.gora{
+    background-color: #FFF4CC;
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    float: left;
+}
+
+.dol{
+    background-color: #DBCC93;
+    width: 80%;
+    height: 450px;
+    text-align: center;
+    float: left;
+}
+
+footer{
+    background-color: #9692B1;
+    color: white;
+    text-align: right;
+}
+
+a{
+    color: white;
+}
+
+.goraimg{
+    width: 15%;
+    margin: 20px;
+}
+
+.dolimg{
+    border: 4px solid #9692B1;
+}
+
+.dolimg:hover{
+    border: 4px solid grey;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria zdjęć</title>
+    <link rel="stylesheet" href="styl5.css">
+    <script>
+        function najechanie(id, img){
+            document.getElementById(id).src = img;
+        }
+
+        function zjechanie(id, img){
+            document.getElementById(id).src = img;
+        }
+
+        function klikniecie(id, img){
+            document.getElementById('pies').src = img;
+            zjechanie(id, img);
+        }   
+    </script>
+</head>
+<body>
+    <section class="baner">
+        <h1>Zdjęcia psów</h1>
+    </section>
+    <aside class="lewy">
+        <h2>Kategorie</h2>
+        <ul>
+            <li><a href="psy.html">Psy</a></li>
+            <li><a href="koty.html">Koty</a></li>
+            <li>Gryzonie</li>
+            <li>Jaszczurki</li>
+            <li>Inne zdjęcia</li>
+        </ul>
+        <h4><a href="index.html">Powrót do strony głównej</a></h4>
+    </aside>
+    <main class="gora">
+        <h1>Wybierz zdjęcie</h1><br>
+        <img src="pies1.jpg" alt="pies1" id="1" class="goraimg" onclick="klikniecie('1', 'pies1.jpg')" onmouseover="najechanie('1', 'pies1-szary.jpg')" onmouseout="zjechanie('1', 'pies1.jpg')">
+        <img src="pies2.jpg" alt="pies2" id="2" class="goraimg" onclick="klikniecie('2', 'pies2.jpg')" onmouseover="najechanie('2', 'pies2-szary.jpg')" onmouseout="zjechanie('2', 'pies2.jpg')">
+        <img src="pies3.jpg" alt="pies3" id="3" class="goraimg" onclick="klikniecie('3', 'pies3.jpg')" onmouseover="najechanie('3', 'pies3-szary.jpg')" onmouseout="zjechanie('3', 'pies3.jpg')">
+    </main>
+    <section class="dol">
+        <p>
+            <img src="pies1.jpg" alt="pies-duzy" class="dolimg" id="pies">
+        </p>
+    </section>
+    <footer>
+        <p>Galerię zdjęć opracował <em>Oliwier Gębczyński</em></p> 
+    </footer>
+</body>
+</html>
