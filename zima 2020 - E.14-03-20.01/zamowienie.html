@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabryka cukierków</title>
+    <link rel="stylesheet" href="styl10.css">
+</head>
+<body>
+    <header>
+        <a href="zamowienie.html" class="zamowienie">Zamów cukierki</a>
+    </header>
+    <header>
+        <a href="index.html"><img src="logotyp.png" alt="Nasze logo"></a>
+    </header>
+    <section class="baner">
+        <h1>Strefa zamówień</h1>
+    </section>
+    <main class="lewy">
+        Numer kształtu: <br>
+        <input type="number" id="ksztalt" max="3"> <br>
+        Skomponuj swój kolor, podaj RGB: <br>
+        <label>R:<input type="number" max="255" id="R"></label>
+        <label>G:<input type="number" max="255" id="G"></label>
+        <label>B:<input type="number" max="255" id="B"></label> <br>
+        <button id="zamowienie_przycisk">zamowienie</button>
+        <p id="zamowienie">Twoje zamówienie</p>
+        <button id="kolor">Kolor</button>
+    </main>
+    <main class="parwy">
+        <h2>Nasza oferta</h2>
+        <Table>
+            <tr>
+                <td>Kształty</td>
+                <td rowspan="2">Możesz zamówić <br> dowolny kolor cukierka</td>
+            </tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>cytryna</li>
+                        <li>liść</li>
+                        <li>banan</li>
+                    </ol>
+                </td>
+            </tr>
+        </Table>
+
+    </main>
+    <footer>Autor strony: <b>Oliwier Gębczyński</b></footer>
+    <script>
+        const przycisk_zamowienie = document.querySelector("#zamowienie_przycisk");
+
+        przycisk_zamowienie.addEventListener("click", function(){
+            const ksztalt = document.querySelector("#ksztalt").value;
+            const zamowienie = document.querySelector("#zamowienie");
+            const przycisk_zamiana = document.querySelector("#kolor");
+
+            if(ksztalt == 1){
+                zamowienie.innerHTML = "Twoje zamówienie to cukierek cytryna";
+            }else if(ksztalt == 2){
+                zamowienie.innerHTML = "Twoje zamówienie to cukierek liść";
+            }else if(ksztalt == 3){
+                zamowienie.innerHTML = "Twoje zamówienie to cukierek banan";
+            }
+            
+            const R = document.querySelector("#R").value;
+            const G = document.querySelector("#G").value;
+            const B = document.querySelector("#B").value;
+
+            przycisk_zamiana.style.backgroundColor = `rgb(${R}, ${G}, ${B}) `;
+        });
+    </script>
+</body>
+</html>
