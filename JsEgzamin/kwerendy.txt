@@ -1,0 +1,4 @@
+1. CREATE USER 'Agnieszka'@'%' IDENTIFIED VIA mysql_native_password USING 'haslo4';
+2. SELECT AVG(rocznik) FROM samochody WHERE marka = "opel";
+3. SELECT samochody.marka, klienci.imie FROM wypozyczenia JOIN samochody ON samochody.id = wypozyczenia.samochody_id JOIN klienci on klienci.id = wypozyczenia.klienci_id;
+4. ALTER TABLE `klasa` DROP `cena`;

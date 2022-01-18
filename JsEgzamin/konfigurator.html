@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <main class="lewy">
+        <h1>Konfigurator stylu</h1>
+        <p>Podaj kolor tła: </p> <br>
+        <button id="indigo" onclick="zmiana_tla('indigo')">Indigo</button>
+        <button id="steelblue" onclick="zmiana_tla('steelblue')">SteelBlue</button>
+        <button id="olive" onclick="zmiana_tla('olive')">Olive</button> <br>
+        <p>Podaj kolor czcionki: </p>
+        <select onclick="zmiana_czcionki()" id="select">
+            <option value="white">White</option>
+            <option value="tan">Tan</option>
+            <option value="Bisque">Bisque</option>
+            <option value="Plum">Plum</option>
+        </select> <br>
+        <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+        <input type="text" value="100%" id="rozmiar" onchange="zmiana_rozmiaru()"> <br>
+        <p>Czy rysunek ma mieć ramkę?</p>
+        Rysuj ramkę <input type="checkbox" checked id="checkbox" onchange="zmiana_ramki()"> <br>
+        <p>Jaki jest typ punktora listy?</p>
+        <input type="radio" name="radio" value="disc" checked onchange="styl_listy('disc')">dysk <br>
+        <input type="radio" name="radio" value="square" onchange="styl_listy('square')">kwadrat <br>
+        <input type="radio" name="radio" value="circle" onchange="styl_listy('circle')">okrąg <br>
+    </main>
+    <main class="prawy">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar" id="img">
+        <ul class="lista">
+            <li class="czcionka">element 1</li>
+            <li class="czcionka">element 2</li>
+            <li class="czcionka">element 3</li>
+        </ul>
+        <p class="czcionka">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    </main>
+    <footer>Autor: Oliwier Gębczyński</footer>
+    <script>
+        function zmiana_tla(kolor){
+            const prawy = document.querySelector(".prawy");
+            prawy.style.backgroundColor = kolor;
+        };
+        function zmiana_czcionki(){
+            const czcionka = document.querySelectorAll(".czcionka");
+            const select = document.querySelector("#select").value;
+            czcionka.forEach(element => {
+                element.style.color = select;
+            });
+        };
+        function zmiana_rozmiaru(){
+            const czcionka = document.querySelectorAll(".czcionka");
+            const rozmiar = document.querySelector("#rozmiar").value;
+            czcionka.forEach(element => {
+                element.style.fontSize = rozmiar;
+            });
+        }
+
+        function zmiana_ramki(){
+            const img = document.querySelector("#img");
+            const checkbox = document.querySelector("#checkbox");
+            if (checkbox.checked == true){
+                img.style.border = "solid 1px white"
+            }else{
+                img.style.border = "none"
+            }
+        }
+
+        function styl_listy(typ){
+            const lista = document.querySelector(".lista");
+            lista.style.listStyle = typ;
+        }
+    </script>
+</body>
+</html>
