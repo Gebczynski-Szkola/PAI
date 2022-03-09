@@ -1,0 +1,6 @@
+a) string t1, string t2 - oznacza że dane wprawadzane do funkcji są typu string / ciąg znaków
+b) pętla while jest tutaj zastosowana ponieważ będzie się ona wykonywać do momentu az nie otrzymamy zamierzonego wyniku i nie zamy ilości wykonan tej petli potrzebnych do uzyskania wyniku. Petla for sprawdza sie w momencie gdzie wiemy ile razy funkja musi sie wykonac.
+c) && - operator logiczny, powoduję że każdy z 3 warunków musi być spełniony zeby pętla sie wykonała. | Opis: i < dl1 && i < dl2 - sprawdza czy wyrazy sa tej samej dlugosci, jesli jedno z nich bedzie mniejsze petla sie nie wykona i warunek przy return zwróci 0/false. Nastepnym warunkiem w petli jest t1[i] == t2[i] - sprawdza ten warunek czy znaki na danej pozycji sa takie same, jesli nie to petla zostanie przerwana i return zwróci 0/false. Jeśli jednak wszystko pójdzie po dobrej mysli wynikiem bedzie 1/true. 
+d) Funkcja moze zwrócić tylko prawde/1 lub fałsz/0 ponieważ jest typu bool.
+e) Zostanie zwrócone 0/false ponieważ "a" i "A" są innymi znakami i maja inna wartosic ASCII "A" == 65dec, "a" == 97dec.
+ 
